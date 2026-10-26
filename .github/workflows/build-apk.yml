@@ -51,7 +51,7 @@ jobs:
           cat > app/src/main/AndroidManifest.xml <<'EOF'
           <manifest xmlns:android="http://schemas.android.com/apk/res/android">
               <uses-permission android:name="android.permission.INTERNET" />
-              <application android:theme="@android:style/Theme.Material.Light.NoActionBar" android:label="MosulMaps" android:usesCleartextTraffic="true">
+              <application android:theme="@android:style/Theme.Material.Light.NoActionBar" android:label="دربنا" android:usesCleartextTraffic="true">
                   <activity android:name=".MainActivity" android:exported="true">
                       <intent-filter>
                           <action android:name="android.intent.action.MAIN" />
