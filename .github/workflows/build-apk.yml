@@ -21,7 +21,8 @@ jobs:
       - name: Create Android app
         shell: bash
         run: |
-          mkdir -p app/src/main/assets app/src/main/java/com/mosulmaps/app
+          mkdir -p app/src/main/assets app/src/main/java/com/mosulmaps/app app/src/main/res/drawable
+cp darbuna.png app/src/main/res/drawable/darbuna.png
           cp MosulMaps_RealMap_Prototype.html app/src/main/assets/index.html
           cat > settings.gradle <<'EOF'
           pluginManagement { repositories { google(); mavenCentral(); gradlePluginPortal() } }
@@ -51,8 +52,7 @@ jobs:
           cat > app/src/main/AndroidManifest.xml <<'EOF'
           <manifest xmlns:android="http://schemas.android.com/apk/res/android">
               <uses-permission android:name="android.permission.INTERNET" />
-              <application android:theme="@android:style/Theme.Material.Light.NoActionBar" android:label="دربنا" android:usesCleartextTraffic="true">
-                  <activity android:name=".MainActivity" android:exported="true">
+              <application android:theme="@android:style/Theme.Material.Light.NoActionBar" android:label="دربنا" android:icon="@drawable/darbuna" android:usesCleartextTraffic="true">
                       <intent-filter>
                           <action android:name="android.intent.action.MAIN" />
                           <category android:name="android.intent.category.LAUNCHER" />
