@@ -1,4 +1,4 @@
-name: Build MosulMaps APK
+name: Build Darbuna APK
 on:
   workflow_dispatch:
   push:
